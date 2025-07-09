@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yes or No?</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #1d2b64, #f8cdda);
+            color: #fff;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background-color: #ffffff;
+            color: #1d2b64;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        .result {
+            margin-top: 40px;
+            font-size: 60px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will it be YES or NO?</h1>
+    <button onclick="getDecision()">Click to Decide</button>
+    <div class="result" id="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
