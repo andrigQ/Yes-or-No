@@ -3,47 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yes or No?</title>
+    <title>Magic 8 Ball</title>
     <style>
         body {
-            background: linear-gradient(to right, #1d2b64, #f8cdda);
+            background: radial-gradient(circle, #0f0f3e, #000);
             color: #fff;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-family: 'Arial Black', sans-serif;
             text-align: center;
             padding: 100px 20px;
         }
 
         h1 {
             font-size: 48px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            max-width: 400px;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 8px;
+            border: none;
+            margin-bottom: 20px;
         }
 
         button {
-            background-color: #ffffff;
-            color: #1d2b64;
+            background-color: #222;
+            color: #0ff;
             padding: 15px 30px;
-            border: none;
-            border-radius: 10px;
+            border: 2px solid #0ff;
+            border-radius: 50px;
             font-size: 24px;
             cursor: pointer;
-            transition: transform 0.2s;
+            margin-top: 10px;
+            transition: background 0.2s, transform 0.2s;
         }
 
         button:hover {
-            transform: scale(1.1);
+            background-color: #0ff;
+            color: #000;
+            transform: scale(1.05);
         }
 
-        .result {
-            margin-top: 40px;
-            font-size: 60px;
-            font-weight: bold;
+        .ball {
+            margin: 40px auto;
+            width: 250px;
+            height: 250px;
+            background: #000;
+            border-radius: 50%;
+            border: 5px solid #0ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .answer {
+            font-size: 20px;
+            color: #0ff;
+            text-align: center;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Will it be YES or NO?</h1>
-    <button onclick="getDecision()">Click to Decide</button>
-    <div class="result" id="result"></div>
+    <h1>Ask the Magic 8 Ball</h1>
+    <input type="text" id="question" placeholder="Type your question here..." />
+    <br>
+    <button onclick="shakeBall()">Shake</button>
+    <div class="ball">
+        <div class="answer" id="answer">🎱</div>
+    </div>
 
     <script src="script.js"></script>
 </body>
